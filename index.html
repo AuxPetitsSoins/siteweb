@@ -37,7 +37,8 @@
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(201, 123, 94, 0.12);
   }
-  .logo { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 600; color: var(--terracotta); line-height: 1.1; }
+  .logo { display: flex; align-items: center; gap: 0.7rem; font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 600; color: var(--terracotta); line-height: 1.1; }
+  .logo-img { height: 48px; width: auto; flex-shrink: 0; }
   .logo small { display: block; font-size: 0.95rem; font-weight: 400; font-style: italic; color: var(--ink-soft); letter-spacing: 0.03em; }
   nav ul { display: flex; gap: 1.8rem; list-style: none; }
   nav a { text-decoration: none; color: var(--ink-soft); font-weight: 600; font-size: 0.95rem; transition: color 0.2s; }
@@ -247,8 +248,11 @@
 <!-- NAVIGATION -->
 <nav>
   <div class="logo">
-    Aux Petits Soins
-    <small>Visites à domicile pour vos animaux</small>
+    <img src="images/logo_mini.png" alt="" class="logo-img">
+    <span class="logo-text">
+      Aux Petits Soins
+      <small>Visites à domicile pour vos animaux</small>
+    </span>
   </div>
   <ul id="nav-menu">
     <li><a href="#apropos">À propos</a></li>
