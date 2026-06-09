@@ -80,17 +80,19 @@
 
   /* ---------- À PROPOS ---------- */
   .about { background: var(--white); }
-  .about p { font-size: 1.15rem; max-width: 60ch; margin: 0 auto; color: var(--ink-soft); text-align: justify; }
+  .about p { font-size: 1.15rem; color: var(--ink-soft); text-align: justify; }
   .about p + p { margin-top: 1rem; }
+  .about-grid {
+    display: grid; grid-template-columns: 1.6fr 0.8fr; gap: 2.5rem; align-items: center;
+  }
   .profiles {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem;
-    max-width: 60ch; margin: 1.6rem auto 0;
+    display: flex; flex-direction: column; gap: 0.8rem;
   }
   .profiles a {
     display: inline-block; padding: 0.55rem 1.2rem; border-radius: 999px;
     border: 2px solid var(--peach); background: var(--cream);
     color: var(--terracotta); font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; transition: background 0.2s, transform 0.2s;
+    text-decoration: none; text-align: center; transition: background 0.2s, transform 0.2s;
   }
   .profiles a:hover { background: var(--peach); transform: translateY(-2px); }
 
@@ -189,7 +191,7 @@
   .price-card .amount { font-size: 2rem; font-family: 'Fraunces', serif; color: var(--terracotta); }
   .price-card .amount small { font-size: 0.9rem; color: var(--ink-soft); font-family: 'Nunito'; }
   .disclaimer {
-    margin-top: 2rem; padding: 1rem 1.3rem; background: var(--sage); border-radius: 14px;
+    margin-top: 2rem; padding: 1rem 1.3rem; background: var(--peach); border-radius: 14px;
     font-size: 0.95rem; color: var(--ink); display: flex; gap: 0.6rem; align-items: flex-start;
   }
   .tarifs-intro { margin-bottom: 2.5rem; }
@@ -205,7 +207,7 @@
 
   /* ---------- CONTACT ---------- */
   .contact { background: var(--white); }
-  .contact-form { max-width: 560px; margin: 0 auto; }
+  .contact-form { max-width: 560px; margin: 0; }
   .field { margin-bottom: 1.2rem; }
   .field label { display: block; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.95rem; }
   .field input, .field select, .field textarea {
@@ -236,6 +238,7 @@
     .hero-text p { margin-left: auto; margin-right: auto; }
     .hero-img { max-width: 260px; margin: 0 auto; }
     .carousel-btn { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 1.6rem; }
   }
 </style>
 </head>
@@ -249,10 +252,10 @@
   </div>
   <ul id="nav-menu">
     <li><a href="#apropos">À propos</a></li>
-    <li><a href="#philosophie">Ma façon de faire</a></li>
-    <li><a href="#trombinoscope">Mes protégés</a></li>
+    <li><a href="#philosophie">Ma philosophie</a></li>
+    <li><a href="#trombinoscope">Mes petits protégés</a></li>
     <li><a href="#avis">Avis</a></li>
-    <li><a href="#tarifs">Tarifs</a></li>
+    <li><a href="#tarifs">Prestations &amp; Tarifs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
@@ -275,15 +278,19 @@
   <div class="wrap">
     <span class="section-label">À propos</span>
     <h2>Faisons connaissance</h2>
-    <p>Bonjour, </p>
-    <p>Je m'appelle Sophie et je suis une amoureuse inconditionnelle des animaux depuis toujours : il m'est impossible de vivre sans eux. J'ai aujourd'hui deux chats et quatre araignées phidippus, des membres à part entière de ma famille. C'est pourquoi je comprends à quel point il est essentiel de pouvoir partir l'esprit tranquille, en sachant que nos compagnons à quatre pattes (ou plus, ou moins !) sont entre de bonnes mains et reçoivent toute l'attention qu'ils méritent.</p>
-    <p>J'ai eu l'occasion de m'occuper de nombreux types d'animaux : souris, rats, gerbilles, chiens, chats, geckos, serpents… et je continue avec plaisir, passion et sérieux à prendre soin des animaux de mes proches et amis. Je serais ravie de m'occuper de vos petits compagnons pendant vos déplacements.</p>
-    <p>Au plaisir de vous rencontrer, vous et vos animaux !</p>
-    <div class="profiles">
-      <a href="https://www.rover.com/members/sophie-s-woaf/" target="_blank" rel="noopener">Mon profil Rover ↗</a>
-      <a href="https://catinaflat.ch/members/sophie-s-woaf/" target="_blank" rel="noopener">Mon profil Cat in a Flat ↗</a>
-      <a href="https://petsitting24.ch/fr/providers/4837804?public_view=true" target="_blank" rel="noopener">Mon profil Pet Sitting 24 ↗</a>
-      <a href="https://instagram.com/[COMPTE_INSTA_PETSITTING]" target="_blank" rel="noopener">Instagram ↗</a>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Bonjour, </p>
+        <p>Je m'appelle Sophie et je suis une amoureuse inconditionnelle des animaux depuis toujours : il m'est impossible de vivre sans eux. J'ai aujourd'hui deux chats et quatre araignées phidippus, des membres à part entière de ma famille. C'est pourquoi je comprends à quel point il est essentiel de pouvoir partir l'esprit tranquille, en sachant que nos compagnons à quatre pattes (ou plus, ou moins !) sont entre de bonnes mains et reçoivent toute l'attention qu'ils méritent.</p>
+        <p>J'ai eu l'occasion de m'occuper de nombreux types d'animaux : souris, rats, gerbilles, chiens, chats, geckos, serpents… et je continue avec plaisir, passion et sérieux à prendre soin des animaux de mes proches et amis. Je serais ravie de m'occuper de vos petits compagnons pendant vos déplacements.</p>
+        <p>Au plaisir de vous rencontrer, vous et vos animaux !</p>
+      </div>
+      <div class="profiles">
+        <a href="https://www.rover.com/members/sophie-s-woaf/" target="_blank" rel="noopener">Mon profil Rover ↗</a>
+        <a href="https://catinaflat.ch/members/sophie-s-woaf/" target="_blank" rel="noopener">Mon profil Cat in a Flat ↗</a>
+        <a href="https://petsitting24.ch/fr/providers/4837804?public_view=true" target="_blank" rel="noopener">Mon profil Pet Sitting 24 ↗</a>
+        <a href="https://instagram.com/[COMPTE_INSTA_PETSITTING]" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
     </div>
   </div>
 </section>
@@ -291,7 +298,7 @@
 <!-- PHILOSOPHIE -->
 <section id="philosophie">
   <div class="wrap">
-    <span class="section-label">Ma façon de faire</span>
+    <span class="section-label">Ma philosophie</span>
     <h2>Bien plus que la gamelle</h2>
     <div class="philo-grid">
       <div class="philo-card">
@@ -316,13 +323,13 @@
 <!-- TROMBINOSCOPE -->
 <section id="trombinoscope">
   <div class="wrap">
-    <span class="section-label">Le trombinoscope</span>
-    <h2>Mes petits protégés</h2>
+    <span class="section-label">Mes petits protégés</span>
+    <h2>Museaux &amp; Pattounes</h2>
 
     <h3 class="group-title">🏠 Ma petite famille</h3>
     <div class="gallery-static">
       <div class="pet">
-        <div class="pet-photo"><img src="images/emile.webp" alt="Emile" style="object-position: center top;"></div>
+        <div class="pet-photo"><img src="images/emile.jpg" alt="Emile" style="object-position: center top;"></div>
         <div class="pet-info"><strong>Emile</strong><span>Mon chat</span></div>
       </div>
       <div class="pet">
@@ -356,10 +363,8 @@
           <div class="pet-photo"><img src="images/calie.png" alt="Calie"></div>
           <div class="pet-info"><strong>Calie</strong><span>Maine Coon</span></div>
         </div>
-        <div class="pet"><div class="pet-photo">🐹</div><div class="pet-info"><strong>[Prénom]</strong><span>[Espèce / race]</span></div></div>
-        <div class="pet"><div class="pet-photo">🦎</div><div class="pet-info"><strong>[Prénom]</strong><span>[Espèce / race]</span></div></div>
-        <div class="pet"><div class="pet-photo">🐱</div><div class="pet-info"><strong>[Prénom]</strong><span>[Espèce / race]</span></div></div>
-        <div class="pet"><div class="pet-photo">🐶</div><div class="pet-info"><strong>[Prénom]</strong><span>[Espèce / race]</span></div></div>
+        <div class="pet"><div class="pet-photo"><img src="images/paris.png" alt="Paris"></div><div class="pet-info"><strong>Paris</strong><span>Croisé Papillon-Ratier</span></div></div>
+        <div class="pet"><div class="pet-photo"><img src="images/yoshi.jpg" alt="Yoshi"></div><div class="pet-info"><strong>Yoshi</strong><span>Siamois</span></div></div>
       </div>
       <button class="carousel-btn next" onclick="scrollCarousel('pets-carousel', 1)" aria-label="Suivant">›</button>
     </div>
@@ -369,8 +374,8 @@
 <!-- AVIS -->
 <section id="avis" class="reviews">
   <div class="wrap">
-    <span class="section-label">Ils ont confiance</span>
-    <h2>Avis &amp; recommandations</h2>
+    <span class="section-label">Avis</span>
+    <h2>Avis &amp; Recommandations</h2>
     <div class="carousel-wrap">
       <button class="carousel-btn prev" onclick="scrollCarousel('reviews-carousel', -1)" aria-label="Précédent">‹</button>
       <div class="carousel" id="reviews-carousel">
@@ -384,16 +389,6 @@
           <p>« Très bonne expérience ! Ma petite sibérienne a été parfaitement prise en charge. J'ai retrouvé mon petit félin en pleine forme et sereine à mon retour. Je recommande sans hésiter. Merci encore !🙏 »</p>
           <div class="author">Alexandra G.<span>Garde de chat · Pix'Elle</span></div>
         </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>« [Message de recommandation d'un client précédent — à compléter.] »</p>
-          <div class="author">Prénom N.<span>[Type de garde] · [nom de l'animal]</span></div>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>« [Message de recommandation d'un client précédent — à compléter.] »</p>
-          <div class="author">Prénom N.<span>[Type de garde] · [nom de l'animal]</span></div>
-        </div>
       </div>
       <button class="carousel-btn next" onclick="scrollCarousel('reviews-carousel', 1)" aria-label="Suivant">›</button>
     </div>
@@ -403,56 +398,57 @@
 <!-- TARIFS -->
 <section id="tarifs">
   <div class="wrap">
-    <span class="section-label">Prestations &amp; tarifs</span>
-    <h2>Mes prestations</h2>
+    <span class="section-label">Prestations &amp; Tarifs</span>
+    <h2>Mes petits soins</h2>
 
     <div class="tarifs-intro">
-      <p>Chaque visite est pensée pour le bien-être de votre compagnon : je le nourris, je nettoie les gamelles, la litière ou la cage, je joue avec lui, je lui fais des câlins, je le brosse, je le promène si besoin… Je peux aussi administrer ses médicaments, arroser vos plantes, relever votre courrier, et je vous donne toujours de ses nouvelles par SMS ou WhatsApp.</p>
-      <p>Avant tout, on se rencontre ! Un premier rendez-vous chez vous me permet de faire connaissance avec vos petits protégés et de tout savoir sur leurs habitudes, leur caractère et leurs petites manies. Je suis à l'écoute de vos souhaits, et une convention signée entre nous fait ensuite office de contrat pour partir l'esprit tranquille.</p>
+      <p>Chaque visite à domicile est pensée pour le bien-être de votre petit compagnon, et comprend :</p>
+      <p><strong>Soins essentiels :</strong> nourriture, nettoyage des gamelles, entretien des litières ou des cages, traitement médical</p>
+      <p><strong>Bien-être et activité :</strong> promenade si nécessaire, séances de jeux, de brossage et de câlins</p>
+      <p>Je peux également arroser les plantes, relever le courrier, et je vous donne toujours régulièrement des nouvelles et des photos par SMS ou WhatsApp.</p>
+      <p>Parce que chaque animal est unique, un premier rendez-vous est organisé directement à votre domicile. Ce moment privilégié me permettra de faire connaissance avec vous ainsi que vos petits colocataires, et de tout savoir sur leurs petites manies, leurs caractères et leurs besoins spécifiques. Je serai à votre écoute pour m'adapter parfaitement à vos attentes.</p>
     </div>
 
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="icon">🕐</div>
+        <div class="icon">⌚</div>
         <h3>Visite 30 minutes</h3>
-        <div class="amount-line">CHF 25 <span>· zone 1</span></div>
-        <div class="amount-line">CHF 30 <span>· zone 2</span></div>
-        <div class="amount-line">CHF 35 <span>· zone 3</span></div>
+        <div class="amount-line">CHF 20 <span>· Zone 1</span></div>
+        <div class="amount-line">CHF 25 <span>· Zone 2</span></div>
+        <div class="amount-line">CHF 30 <span>· Zone 3</span></div>
+      </div>
+      <div class="price-card">
+        <div class="icon">🕔</div>
+        <h3>Visite 1 heure</h3>
+        <div class="amount-line">CHF 25 <span>· Zone 1</span></div>
+        <div class="amount-line">CHF 30 <span>· Zone 2</span></div>
+        <div class="amount-line">CHF 35 <span>· Zone 3</span></div>
       </div>
       <div class="price-card">
         <div class="icon">🌅</div>
-        <h3>Deux visites matin &amp; soir</h3>
-        <div class="subtitle">(2 × 30 minutes)</div>
-        <div class="amount-line">CHF 45 <span>· zone 1</span></div>
-        <div class="amount-line">CHF 55 <span>· zone 2</span></div>
-        <div class="amount-line">CHF 65 <span>· zone 3</span></div>
-      </div>
-      <div class="price-card">
-        <div class="icon">🕐</div>
-        <h3>Visite 1 heure</h3>
-        <div class="amount-line">CHF 30 <span>· zone 1</span></div>
-        <div class="amount-line">CHF 35 <span>· zone 2</span></div>
-        <div class="amount-line">CHF 40 <span>· zone 3</span></div>
+        <h3>Matin &amp; Soir (2 × 30 minutes)</h3>
+        <div class="amount-line">CHF 35 <span>· Zone 1</span></div>
+        <div class="amount-line">CHF 45 <span>· Zone 2</span></div>
+        <div class="amount-line">CHF 55 <span>· Zone 3</span></div>
       </div>
     </div>
 
     <div class="zones">
       <div class="zone">
         <h3>Zone 1</h3>
-        <p>[Communes à compléter]</p>
+        <p>Bussigny, Echandens, Denges, Ecublens, Chavannes-près-Renens, Renens (VD), Crissier, Villars-Sainte-Croix, Bremblens, Aclens, Prilly, Jouxtens-Mézery</p>
       </div>
       <div class="zone">
         <h3>Zone 2</h3>
-        <p>[Communes à compléter]</p>
+        <p>Lausanne, Epalinges, Le-Mont-sur-Lausanne, Romanel-sur-Lausanne, Cheseaux-sur-Lausanne, Sullens, Penthalaz, Daillans, Lutry, Pully, Paudex, Bellemont-sur-Lausanne, Froideville, Cugy, Morrens, St-Sulpice, Prérevenges, Morges</p>
       </div>
       <div class="zone">
         <h3>Zone 3</h3>
-        <p>[Communes à compléter]</p>
+        <p>Autres</p>
       </div>
     </div>
 
     <div class="disclaimer">
-      <span>ℹ️</span>
       <span>Les tarifs indiqués sont donnés à titre indicatif et peuvent varier au cas par cas selon les besoins spécifiques de votre animal. N'hésitez pas à me contacter pour discuter de votre situation !</span>
     </div>
   </div>
