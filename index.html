@@ -192,6 +192,16 @@
     margin-top: 2rem; padding: 1rem 1.3rem; background: var(--sage); border-radius: 14px;
     font-size: 0.95rem; color: var(--ink); display: flex; gap: 0.6rem; align-items: flex-start;
   }
+  .tarifs-intro { max-width: 70ch; margin-bottom: 2.5rem; }
+  .tarifs-intro p { color: var(--ink-soft); }
+  .tarifs-intro p + p { margin-top: 0.8rem; }
+  .price-card .amount { display: block; font-size: 1.5rem; margin-top: 0.4rem; }
+  .price-card .amount-line { font-size: 1.05rem; font-family: 'Nunito'; color: var(--ink); font-weight: 700; margin-top: 0.5rem; }
+  .price-card .amount-line span { color: var(--terracotta); }
+  .price-card .subtitle { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 0.4rem; }
+  .zones { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .zone h3 { font-size: 1.15rem; color: var(--terracotta); margin-bottom: 0.4rem; }
+  .zone p { color: var(--ink-soft); font-size: 0.95rem; }
 
   /* ---------- CONTACT ---------- */
   .contact { background: var(--white); }
@@ -393,28 +403,57 @@
 <!-- TARIFS -->
 <section id="tarifs">
   <div class="wrap">
-    <span class="section-label">Tarifs - Visites à domicile</span>
+    <span class="section-label">Prestations &amp; tarifs</span>
     <h2>Mes prestations</h2>
+
+    <div class="tarifs-intro">
+      <p>Chaque visite est pensée pour le bien-être de votre compagnon : je le nourris, je nettoie les gamelles, la litière ou la cage, je joue avec lui, je lui fais des câlins, je le brosse, je le promène si besoin… Je peux aussi administrer ses médicaments, arroser vos plantes, relever votre courrier, et je vous donne toujours de ses nouvelles par SMS ou WhatsApp.</p>
+      <p>Avant tout, on se rencontre ! Un premier rendez-vous chez vous me permet de faire connaissance avec vos petits protégés et de tout savoir sur leurs habitudes, leur caractère et leurs petites manies. Je suis à l'écoute de vos souhaits, et une convention signée entre nous fait ensuite office de contrat pour partir l'esprit tranquille.</p>
+    </div>
+
     <div class="pricing-grid">
       <div class="price-card">
-        <div class="icon">🐱</div>
-        <h3>Garde de chat</h3>
-        <div class="amount">CHF 20 <small>/ visite</small></div>
+        <div class="icon">🕐</div>
+        <h3>Visite 30 minutes</h3>
+        <div class="amount-line">CHF 25 <span>· zone 1</span></div>
+        <div class="amount-line">CHF 30 <span>· zone 2</span></div>
+        <div class="amount-line">CHF 35 <span>· zone 3</span></div>
       </div>
       <div class="price-card">
-        <div class="icon">🐶</div>
-        <h3>Garde de chien</h3>
-        <div class="amount">CHF 25 <small>/ jour</small></div>
+        <div class="icon">🌅</div>
+        <h3>Deux visites matin &amp; soir</h3>
+        <div class="subtitle">(2 × 30 minutes)</div>
+        <div class="amount-line">CHF 45 <span>· zone 1</span></div>
+        <div class="amount-line">CHF 55 <span>· zone 2</span></div>
+        <div class="amount-line">CHF 65 <span>· zone 3</span></div>
       </div>
       <div class="price-card">
-        <div class="icon">🐰</div>
-        <h3>Autres animaux</h3>
-        <div class="amount">CHF 20 <small>/ visite</small></div>
+        <div class="icon">🕐</div>
+        <h3>Visite 1 heure</h3>
+        <div class="amount-line">CHF 30 <span>· zone 1</span></div>
+        <div class="amount-line">CHF 35 <span>· zone 2</span></div>
+        <div class="amount-line">CHF 40 <span>· zone 3</span></div>
       </div>
     </div>
+
+    <div class="zones">
+      <div class="zone">
+        <h3>Zone 1</h3>
+        <p>[Communes à compléter]</p>
+      </div>
+      <div class="zone">
+        <h3>Zone 2</h3>
+        <p>[Communes à compléter]</p>
+      </div>
+      <div class="zone">
+        <h3>Zone 3</h3>
+        <p>[Communes à compléter]</p>
+      </div>
+    </div>
+
     <div class="disclaimer">
       <span>ℹ️</span>
-      <span>Les tarifs indiqués sont donnés à titre indicatif pour des visites de 30 minutes et peuvent varier au cas par cas selon les besoins spécifiques de votre animal. N'hésitez pas à me contacter pour discuter de votre situation !</span>
+      <span>Les tarifs indiqués sont donnés à titre indicatif et peuvent varier au cas par cas selon les besoins spécifiques de votre animal. N'hésitez pas à me contacter pour discuter de votre situation !</span>
     </div>
   </div>
 </section>
