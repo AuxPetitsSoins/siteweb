@@ -2,8 +2,6 @@
   <img src="images/logo_banner.png" alt="Aux Petits Soins" width="420">
 </p>
 
-<h1 align="center">🐾 Aux Petits Soins</h1>
-
 <p align="center"><em>Visites à domicile pour vos animaux — Bussigny, Ouest lausannois et ses environs.</em></p>
 
 Site web vitrine de **Sophie**, pet-sitteuse douce et attentive. Amoureuse inconditionnelle des animaux, elle prend soin de vos compagnons comme s'ils étaient les siens — qu'ils soient poilus, à écailles ou à huit pattes — pendant vos déplacements.
