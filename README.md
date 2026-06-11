@@ -12,7 +12,7 @@ Au-delà de la gamelle, chaque visite comprend des soins essentiels (nourriture,
 
 ## 🌐 Le site
 
-👉 **[Découvrir le site](https://github.com/VOTRE-UTILISATEUR/VOTRE-DEPOT)** *(remplacer par l'URL réelle, ex. lien GitHub Pages)*
+👉 **[Découvrir le site]([https://github.com/VOTRE-UTILISATEUR/VOTRE-DEPOT](https://auxpetitssoins.github.io/siteweb/))**
 
 ## 📱 Retrouvez Sophie
 
